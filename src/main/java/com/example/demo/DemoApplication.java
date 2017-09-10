@@ -38,14 +38,6 @@ public class DemoApplication {
 		return "done";
 	}
 
-	@Bean
-	public JobDetail jobDetail() {
-		return JobBuilder.newJob().ofType(com.example.demo.quartz.SampleJob.class)
-				.storeDurably()
-				.withIdentity("Qrtz_Job_Detail")
-				.withDescription("Invoke Sample Job service...")
-				.build();
-	}
 
 	@Bean
 	public JobDetailFactoryBean jobDetail() {
