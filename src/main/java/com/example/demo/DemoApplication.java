@@ -39,12 +39,4 @@ public class DemoApplication {
 	}
 
 
-	@Bean
-	public JobDetailFactoryBean jobDetail() {
-		JobDetailFactoryBean jobDetailFactory = new JobDetailFactoryBean();
-		jobDetailFactory.setJobClass(SampleJob.class);
-		jobDetailFactory.setDescription("Invoke Sample Job service...");
-		jobDetailFactory.setDurability(true);
-		return jobDetailFactory;
-	}
 }
